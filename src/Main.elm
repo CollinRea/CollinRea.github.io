@@ -4,15 +4,19 @@ import Html exposing (..)
 import Model exposing (..)
 import Update
 import View
-import Initialize
 import Subscriptions
 
 
 main : Program Never Model Msg
 main =
     Html.program
-        { init = Initialize.init
+        { init = init
         , view = View.view
         , update = Update.update
         , subscriptions = Subscriptions.subscriptions
         }
+
+
+init : ( Model, Cmd Msg )
+init =
+    { screenSize = Desktop } ! []
