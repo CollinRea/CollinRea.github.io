@@ -7,7 +7,7 @@ import Element.Attributes exposing (..)
 import AppStyles
 
 
-blockAttributes : ScreenSize -> List (Element.Internal.Model.Attribute variation msg)
+blockAttributes : ScreenSize -> List (Element.Attribute variation msg)
 blockAttributes screenSize =
     case screenSize of
         Phone ->
